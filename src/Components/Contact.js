@@ -8,7 +8,7 @@ export default function Contact() {
             want to say hi, my inbox is always open so feel free to reach out
             and I will get back to you as soon as possible.
         </p>
-        <a className="contact__btn btn" href="mailto:slayingthedragon.io@gmail.com" target="_blank">
+        <a className="contact__btn btn" href="mailto:mzidanabdulkadir@gmail.com" target="_blank">
             React Out
         </a>
     </section>);
