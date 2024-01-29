@@ -2,30 +2,30 @@ import "../styles/components/header.css";
 
 export default function Header(props) {
     return (
-        <header class="header container">
+        <header className="header container">
             <nav>
-                <ul class="header__menu">
+                <ul className="header__menu">
                     <li>
-                        <a class="header__link" href="#about">
+                        <a className="header__link" href="#about">
                             About
                         </a>
                     </li>
                     <li>
-                        <a class="header__link" href="#featured">
+                        <a className="header__link" href="#featured">
                             Work
                         </a>
                     </li>
                     <li>
-                        <a class="header__link" href="#contact">
+                        <a className="header__link" href="#contact">
                             Contact
                         </a>
                     </li>
-                    <li class="header__line"></li>
+                    <li className="header__line"></li>
                     <li>
                         <button
                             aria-label="theme-toggle btn"
                             id="theme-toggle"
-                            class="header__sun"
+                            className="header__sun"
                             onClick={props.darkMode}
                         >
                             <svg
@@ -38,21 +38,21 @@ export default function Header(props) {
                         </button>
                     </li>
                     <li>
-                        <a class="header__resume btn" href="#">
+                        <a className="header__resume btn" href="#">
                             Resume
                         </a>
                     </li>
                 </ul>
-                <button aria-label="mobile nav button" class="header__bars">
+                <button aria-label="mobile nav button" className="header__bars">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
                     >
                         <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                         />
                     </svg>
                 </button>
