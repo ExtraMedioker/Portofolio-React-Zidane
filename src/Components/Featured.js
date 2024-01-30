@@ -34,6 +34,8 @@ export default function Featured() {
                     <ul className="featured__tech-stack">
                         <li className="featured__info">TailwindCSS</li>
                         <li className="featured__info">ReactJS</li>
+                        <li className="featured__info">Java</li>
+                        <li className="featured__info">Flutter</li>
                     </ul>
                 </div>
                 <div>
