@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import profile from "./profile.jpg";
 import Header from "./Components/Header.js";
 import MobileNav from "./Components/MobileNav.js";
@@ -11,37 +11,30 @@ import Footer from "./Components/Footer.js";
 import "./styles/modern-normalize.css";
 import "./styles/utils.css";
 
-
-
 function App() {
+  // State for theme
+  const [theme, setTheme] = useState("dark-mode"); // Set the default theme
+
   useEffect(() => {
     // Retrieve theme from localStorage
-    const theme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
 
     // Apply theme
-    if (theme) {
-      document.body.classList.add(theme);
-    }
-  }, []); // Run this effect only once on mount
+    document.body.className = ""; // Clear existing classes
+    document.body.classList.add(theme);
+  }, [theme]);
 
-  const darkMode = () => {
-    const themeToggleBtns = document.querySelectorAll("#theme-toggle");
 
-    // Handlers
-    const handleThemeToggle = () => {
-      document.body.classList.toggle("light-mode");
-      if (document.body.classList.contains("light-mode")) {
-        localStorage.setItem("theme", "light-mode");
-      } else {
-        localStorage.removeItem("theme");
-        document.body.removeAttribute("class");
-      }
-    };
+  const toggleTheme = () => {
+    // Toggle theme and update state
+    const newTheme = theme === "dark-mode" ? "light-mode" : "dark-mode";
+    setTheme(newTheme);
 
-    // Events
-    themeToggleBtns.forEach((btn) =>
-      btn.addEventListener("click", handleThemeToggle)
-    );
+    // Save theme to localStorage
+    localStorage.setItem("theme", newTheme);
   };
 
   const mobileNavi = () => {
@@ -75,10 +68,11 @@ function App() {
   useEffect(() => {
     mobileNavi();
   }, []);
+
   return (
     <>
-      <Header darkMode={darkMode} />
-      <MobileNav darkMode={darkMode} />
+      <Header darkMode={toggleTheme} />
+      <MobileNav darkMode={toggleTheme} />
       <main>
         <Hero img={profile} />
         <About />
