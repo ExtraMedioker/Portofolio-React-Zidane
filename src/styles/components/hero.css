@@ -1,3 +1,13 @@
+/* Animation */
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.reactlogo {
+  animation: spin infinite 5s linear;
+}
+
 .hero {
   text-align: center;
   display: flex;

@@ -7,7 +7,7 @@ export default function About() {
                 <h2 className="about__title">About</h2>
                 <p className="about__description">
                     Hello there! I'm Zidan, a
-                    <strong> Frontend / Fullstack-Jamstack </strong> web developer based
+                    <strong> Programmers </strong> web developer/Android applications
                 </p>
                 <p className="about__description">
                     People who know me say I'm obsessed, that's fair, I am very driven and
