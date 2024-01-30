@@ -1,3 +1,7 @@
+#about {
+  padding: 0;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -55,6 +59,10 @@
 
 /* xs */
 @media (min-width: 475px) {
+  #about {
+    padding: 0;
+  }
+
   .about {
     gap: 1.5rem;
   }
@@ -82,6 +90,10 @@
 
 /* sm */
 @media (min-width: 640px) {
+  #about {
+    padding: 5em;
+  }
+
   .about__img-wrapper {
     margin: 0 auto;
   }
@@ -96,6 +108,10 @@
 
 /* lg */
 @media (min-width: 1024px) {
+  #about {
+    padding: 5em;
+  }
+
   .about {
     flex-direction: row;
     justify-content: space-between;
@@ -121,6 +137,10 @@
 
 /* xl */
 @media (min-width: 1280px) {
+  #about {
+    padding: 5em;
+  }
+
   .about__content {
     gap: 2rem;
   }

@@ -1,3 +1,7 @@
+#featured {
+  padding: 0;
+}
+
 .featured__subtitle {
   font-size: var(--size-sm);
   color: var(--clr-indigo);
@@ -86,6 +90,10 @@
 
 /* xs */
 @media (min-width: 475px) {
+  #featured {
+    padding: 0;
+  }
+
   .featured__subtitle {
     font-size: var(--size-base);
   }
@@ -120,6 +128,10 @@
 
 /* sm */
 @media (min-width: 640px) {
+  #featured {
+    padding: 5em;
+  }
+
   .featured__img-container {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
@@ -158,6 +170,10 @@
 
 /* xl */
 @media (min-width: 1280px) {
+  #featured {
+    padding: 5em;
+  }
+
   .featured__subtitle {
     font-size: var(--size-xl);
   }
