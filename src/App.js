@@ -37,7 +37,7 @@ function App() {
     localStorage.setItem("theme", newTheme);
   };
 
-  const mobileNavi = () => {
+  useEffect(() => {
     const headerBtn = document.querySelector(".header__bars");
     const mobileNav = document.querySelector(".mobile-nav");
     const mobileLinks = document.querySelectorAll(".mobile-nav__link");
@@ -63,11 +63,7 @@ function App() {
         document.body.style.overflowY = "auto";
       });
     });
-  };
-
-  useEffect(() => {
-    mobileNavi();
-  }, []);
+  }, [])
 
   return (
     <>
